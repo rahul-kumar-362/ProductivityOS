@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProductivityOS</title>
+    <!-- critical: paint correct backdrop before any CSS/JS loads (no white flash) -->
+    <style>
+      html {
+        background: #09090c;
+      }
+      html[data-theme='light'] {
+        background: #f9f9fb;
+      }
+    </style>
+    <!-- render-blocking: set theme before first paint (no FOUC). Key matches STORAGE_KEYS.theme -->
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem('pos:theme'); // 'dark' | 'light' | 'system'
+          var mql = window.matchMedia('(prefers-color-scheme: dark)');
+          var resolved = !s || s === 'system' ? (mql.matches ? 'dark' : 'light') : s;
+          document.documentElement.dataset.theme = resolved;
+        } catch (_) {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

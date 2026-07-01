@@ -1,0 +1,45 @@
+@import './tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts: Inter/JetBrains Mono are vendored in a later pass; system stack for now. */
+
+@layer base {
+  html {
+    background: rgb(var(--bg));
+  }
+  body {
+    background: rgb(var(--bg));
+    color: rgb(var(--text-primary));
+    font-feature-settings: 'cv11', 'ss01';
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+  }
+  *:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+  }
+  /* opt-in transition only when the user toggles theme (never on cold load) */
+  html.theme-transition,
+  html.theme-transition * {
+    transition:
+      background-color var(--dur-base) var(--ease-out),
+      border-color var(--dur-base) var(--ease-out),
+      color var(--dur-base) var(--ease-out);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+/* Floating window must be fully transparent (WebView2 anti-black-flash). */
+html[data-window='float'],
+html[data-window='float'] body {
+  background: transparent;
+}
