@@ -72,7 +72,7 @@ ARCHITECTURE.md  synthesized architecture overview
 
 ## Installation (end users)
 
-Download the latest `ProductivityOS_x.y.z_x64-setup.exe` from the Releases page and run it. It installs per-user (no admin). The installer is unsigned, so Windows SmartScreen shows a one-time **More info → Run anyway**.
+No packaged release yet — build from source (see [Build instructions](#build-instructions)). Once a release is published, the installer will be `ProductivityOS_x.y.z_x64-setup.exe` on the [Releases page](https://github.com/rahul-kumar-362/ProductivityOS/releases), installing per-user (no admin). The installer is unsigned, so Windows SmartScreen will show a one-time **More info → Run anyway**.
 
 ## Development
 
@@ -123,4 +123,4 @@ src-tauri/target/release/bundle/nsis/ProductivityOS_0.1.0_x64-setup.exe
 
 ## License
 
-[MIT](LICENSE) © 2026 Rahul Borana
+[All Rights Reserved](LICENSE) © 2026 Rahul Borana — publicly viewable for portfolio/educational purposes only; no reuse, modification, or redistribution without explicit written permission.

@@ -35,8 +35,8 @@
   "bundle": {
     "active": true,
     "targets": ["nsis"],
-    "publisher": "Gabriel Alaniz",
-    "copyright": "© 2026 Gabriel Alaniz",
+    "publisher": "Rahul Borana",
+    "copyright": "© 2026 Rahul Borana. All Rights Reserved.",
     "shortDescription": "Personal productivity desktop app",
     "category": "Productivity",
     "icon": [
