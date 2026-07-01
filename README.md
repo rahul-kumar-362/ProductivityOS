@@ -72,7 +72,7 @@ ARCHITECTURE.md  synthesized architecture overview
 
 ## Installation (end users)
 
-No packaged release yet — build from source (see [Build instructions](#build-instructions)). Once a release is published, the installer will be `ProductivityOS_x.y.z_x64-setup.exe` on the [Releases page](https://github.com/rahul-kumar-362/ProductivityOS/releases), installing per-user (no admin). The installer is unsigned, so Windows SmartScreen will show a one-time **More info → Run anyway**.
+Download [`ProductivityOS_0.1.0_x64-setup.exe`](https://github.com/rahul-kumar-362/ProductivityOS/releases/latest) from the [Releases page](https://github.com/rahul-kumar-362/ProductivityOS/releases) and run it. It installs per-user (no admin). The installer is unsigned, so Windows SmartScreen shows a one-time **More info → Run anyway**.
 
 ## Development
 
