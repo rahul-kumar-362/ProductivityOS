@@ -105,7 +105,7 @@ src-tauri/target/release/bundle/nsis/ProductivityOS_0.1.0_x64-setup.exe
 
 ## Data & migrations
 
-- SQLite lives in `%APPDATA%\com.gabriel.productivityos\productivityos.db` (WAL mode), created automatically on first launch.
+- SQLite lives in `%APPDATA%\com.rahulborana.productivityos\productivityos.db` (WAL mode), created automatically on first launch.
 - Schema is authored in Drizzle (`src/db/schema.ts`). After a schema change:
   ```bash
   npx drizzle-kit generate --name <change>

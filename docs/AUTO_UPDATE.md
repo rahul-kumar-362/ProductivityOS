@@ -5,7 +5,7 @@ ProductivityOS is offline-first and ships **without** an updater active. The app
 ## What's already in place
 - Single versioned source of truth: `version` in `tauri.conf.json` (aligned with `package.json` and `Cargo.toml`).
 - Per-user NSIS installer target with app metadata (publisher, copyright, identifier).
-- Stable app identifier `com.gabriel.productivityos` → stable AppData location, so updates never orphan the SQLite database.
+- Stable app identifier `com.rahulborana.productivityos` → stable AppData location, so updates never orphan the SQLite database.
 - Append-only, versioned DB migrations applied at startup — a newer build safely migrates an older user's DB.
 
 ## To enable updates later

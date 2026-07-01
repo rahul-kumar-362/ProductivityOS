@@ -552,8 +552,8 @@ This keeps `drizzle-kit` as the schema authoring tool while the plugin owns appl
 "bundle": {
   "active": true,
   "targets": ["nsis"],
-  "publisher": "Synagro",
-  "copyright": "© 2026 Gabriel Alaniz",
+  "publisher": "Rahul Borana",
+  "copyright": "© 2026 Rahul Borana. All Rights Reserved.",
   "shortDescription": "Personal productivity OS",
   "icon": ["icons/icon.ico"],
   "windows": {
