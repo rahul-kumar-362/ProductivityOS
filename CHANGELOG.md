@@ -23,5 +23,5 @@ Initial MVP.
 - Dark-first theming (dark / light / system) with no-flash startup; settings page.
 - Local SQLite (WAL) via Drizzle ORM; migrations applied at startup by `tauri-plugin-sql`.
 
-[Unreleased]: https://github.com/OWNER/productivityos/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/OWNER/productivityos/releases/tag/v0.1.0
+[Unreleased]: https://github.com/rahul-kumar-362/ProductivityOS/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/rahul-kumar-362/ProductivityOS/releases/tag/v0.1.0

@@ -5,8 +5,8 @@ Thanks for your interest! ProductivityOS is an offline-first personal desktop ap
 ## Getting started
 
 ```bash
-git clone https://github.com/OWNER/productivityos.git
-cd productivityos
+git clone https://github.com/rahul-kumar-362/ProductivityOS.git
+cd ProductivityOS
 npm install
 npm run tauri dev
 ```
