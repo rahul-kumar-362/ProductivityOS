@@ -123,4 +123,4 @@ src-tauri/target/release/bundle/nsis/ProductivityOS_0.1.0_x64-setup.exe
 
 ## License
 
-[MIT](LICENSE) © 2026 Gabriel Alaniz
+[MIT](LICENSE) © 2026 Rahul Borana
