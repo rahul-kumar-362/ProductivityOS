@@ -17,6 +17,8 @@ export const EVENTS = {
   trayQuickAdd: 'tray://quick-add',
   // Data changed (streak/rollup) -> UI refresh
   statsChanged: 'stats://changed',
+  // Settings changed (any window) -> other windows re-read affected settings
+  settingsChanged: 'settings://changed',
 } as const;
 
 export type EventName = (typeof EVENTS)[keyof typeof EVENTS];

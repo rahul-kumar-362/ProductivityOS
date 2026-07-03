@@ -11,6 +11,7 @@ import { useSettingsStore } from '@/stores/settings.store';
 import type { ThemeChoice } from '@/lib/theme/applyTheme';
 import { useDbSettings } from '../hooks/useDbSettings';
 import { useAutostart } from '../hooks/useAutostart';
+import { StudyMethodsSection } from '../components/StudyMethodsSection';
 
 function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
@@ -84,6 +85,8 @@ export function SettingsPage() {
           }
         />
       </Section>
+
+      <StudyMethodsSection />
 
       <Section title="Streaks">
         <Row

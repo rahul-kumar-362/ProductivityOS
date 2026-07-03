@@ -1,8 +1,7 @@
 import type { ReactNode } from 'react';
 import { Pause, Play, SkipForward, Square } from 'lucide-react';
 import { useTimer } from '../hooks/useTimer';
-
-const DEFAULT_METHOD_ID = 1; // seeded Pomodoro
+import { useDefaultMethodId } from '../hooks/useDefaultMethodId';
 
 /**
  * Compact floating timer surface. Live state via useTimer(); controls are
@@ -11,6 +10,7 @@ const DEFAULT_METHOD_ID = 1; // seeded Pomodoro
  */
 export function FloatingTimer() {
   const t = useTimer();
+  const defaultMethodId = useDefaultMethodId();
 
   return (
     <div
@@ -28,7 +28,7 @@ export function FloatingTimer() {
           data-tauri-drag-region
           className="font-mono text-h1 leading-none tabular-nums text-text-primary"
         >
-          {t.isActive ? t.display : '25:00'}
+          {t.isActive ? t.display : '--:--'}
         </span>
       </div>
 
@@ -44,7 +44,7 @@ export function FloatingTimer() {
           </FloatBtn>
         )}
         {!t.isActive && (
-          <FloatBtn onClick={() => t.start(DEFAULT_METHOD_ID)} primary label="Start">
+          <FloatBtn onClick={() => t.start(defaultMethodId)} primary label="Start">
             <Play size={16} />
           </FloatBtn>
         )}

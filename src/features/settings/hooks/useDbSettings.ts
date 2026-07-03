@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import { isTauri } from '@/services/tauri';
+import { emit, isTauri } from '@/services/tauri';
+import { EVENTS } from '@/config/events.config';
 import { settingsRepo } from '@/db/repositories/settings.repo';
 
 export interface DbSettings {
@@ -39,6 +40,8 @@ export function useDbSettings() {
       await settingsRepo.set('notificationsEnabled', patch.notificationsEnabled, 'boolean');
     if (patch.defaultMethodId !== undefined)
       await settingsRepo.set('defaultMethodId', patch.defaultMethodId, 'number');
+    // Notify other windows (e.g. the persistent floating timer) to re-read settings.
+    if (isTauri()) void emit(EVENTS.settingsChanged);
   }, []);
 
   return { settings, update };
