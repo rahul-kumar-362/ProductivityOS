@@ -72,7 +72,7 @@ ARCHITECTURE.md  synthesized architecture overview
 
 ## Installation (end users)
 
-Download [`ProductivityOS_0.1.0_x64-setup.exe`](https://github.com/rahul-kumar-362/ProductivityOS/releases/latest) from the [Releases page](https://github.com/rahul-kumar-362/ProductivityOS/releases) and run it. It installs per-user (no admin). The installer is unsigned, so Windows SmartScreen shows a one-time **More info → Run anyway**.
+Download [`ProductivityOS_0.2.0_x64-setup.exe`](https://github.com/rahul-kumar-362/ProductivityOS/releases/latest) from the [Releases page](https://github.com/rahul-kumar-362/ProductivityOS/releases) and run it. It installs per-user (no admin). The installer is unsigned, so Windows SmartScreen shows a one-time **More info → Run anyway**.
 
 ## Development
 
@@ -100,7 +100,7 @@ npm run tauri build
 Outputs a per-user NSIS installer at:
 
 ```
-src-tauri/target/release/bundle/nsis/ProductivityOS_0.1.0_x64-setup.exe
+src-tauri/target/release/bundle/nsis/ProductivityOS_0.2.0_x64-setup.exe
 ```
 
 ## Data & migrations

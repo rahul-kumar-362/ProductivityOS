@@ -148,7 +148,7 @@ export function SettingsPage() {
       </Section>
 
       <Section title="About">
-        <Row label={APP.name} hint="Version 0.1.0" control={<span />} />
+        <Row label={APP.name} hint="Version 0.2.0" control={<span />} />
         <p className="text-caption text-text-muted">
           Your data is stored locally on this device. Nothing is sent anywhere.
         </p>

@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-03
+
+### Fixed
+- App-wide freeze (every page stuck on loading skeletons until the process was killed) whenever the floating timer window was created — on launch, from the tray, or via the dashboard "Open floating timer" button. The floating window is now declared statically and only shown/hidden, never rebuilt at runtime, which removes the Windows WebView2 event-loop deadlock that wedged all IPC.
+- Floating timer now remembers its position and size across restarts without flashing on startup.
+
+### Added
+- Custom study methods: create, edit and delete your own interval methods (focus/break/long-break minutes, cycles, auto-start) or count-up methods in **Settings → Study methods**. Built-in methods (Pomodoro, 52/17, Deep Work, Flowtime) stay locked.
+- Default-method picker: choose which study method the floating timer's Start button launches (was hardcoded to Pomodoro). Changes apply immediately, no restart needed.
+
+### Changed
+- Floating timer idle readout shows `--:--` instead of the Pomodoro-specific `25:00`.
+
 ## [0.1.0] - 2026-07-02
 
 Initial MVP.
@@ -23,5 +36,6 @@ Initial MVP.
 - Dark-first theming (dark / light / system) with no-flash startup; settings page.
 - Local SQLite (WAL) via Drizzle ORM; migrations applied at startup by `tauri-plugin-sql`.
 
-[Unreleased]: https://github.com/rahul-kumar-362/ProductivityOS/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/rahul-kumar-362/ProductivityOS/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/rahul-kumar-362/ProductivityOS/releases/tag/v0.2.0
 [0.1.0]: https://github.com/rahul-kumar-362/ProductivityOS/releases/tag/v0.1.0
