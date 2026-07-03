@@ -21,6 +21,22 @@
         "resizable": true,
         "center": true,
         "theme": "Dark"
+      },
+      {
+        "label": "floating-timer",
+        "url": "index.html#/float",
+        "title": "Timer",
+        "width": 268,
+        "height": 108,
+        "minWidth": 120,
+        "minHeight": 48,
+        "transparent": true,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "resizable": true,
+        "shadow": false,
+        "visible": false
       }
     ],
     "security": {
